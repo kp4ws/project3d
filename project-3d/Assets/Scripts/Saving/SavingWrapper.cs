@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using static UnityEngine.InputSystem.InputAction;
 
-namespace Kp4wsGames.Saving
+namespace Kp4wsGames.Util
 {
     public class SavingWrapper : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Kp4wsGames.Saving
+namespace Kp4wsGames.Util
 {
 	[System.Serializable]
 	public class SerializableVector3

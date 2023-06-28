@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Kp4wsGames.Config
+namespace Kp4wsGames.Util
 {
     public class GameConfig : MonoBehaviour
     {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Kp4wsGames.Saving
+namespace Kp4wsGames.Util
 {
 	//Class will be updated both in play time and edit time
 	[ExecuteAlways]

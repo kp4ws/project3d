@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine.Playables;
 using UnityEngine.Events;
 
-namespace Kp4wsGames.EventManagement
+namespace Kp4wsGames.Events
 {
     [RequireComponent(typeof(PlayableDirector))]
     public class CutsceneTrigger : MonoBehaviour

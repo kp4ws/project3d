@@ -1,4 +1,4 @@
-namespace Kp4wsGames.Saving
+namespace Kp4wsGames.Util
 {
 	public interface ISaveable
 	{

@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Kp4wsGames.Saving
+namespace Kp4wsGames.Util
 {
 	public class SavingSystem : MonoBehaviour
 	{
