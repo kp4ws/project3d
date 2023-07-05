@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Kp4wsGames.EventManagement
+namespace Kp4wsGames.Events
 {
 	public class GameEventListener : MonoBehaviour
 	{

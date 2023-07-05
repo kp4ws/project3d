@@ -1,4 +1,4 @@
-using Kp4wsGames.EventManagement;
+using Kp4wsGames.Events;
 using UnityEngine;
 
 namespace Kp4wsGames.Interactables

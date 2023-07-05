@@ -2300,7 +2300,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8282766792521312030, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_Name
-      value: Enemy_Zombie
+      value: Enemy_Parasite
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_RootOrder
@@ -2308,7 +2308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2316,23 +2316,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.61
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.90946656
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.41577715
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2340,7 +2340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 49.137
       objectReference: {fileID: 0}
     - target: {fileID: 8771213475278110116, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2349,7 +2349,7 @@ PrefabInstance:
     - target: {fileID: 9093653108548917828, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 315c174c661046a498c43faf19217c91, type: 2}
+      objectReference: {fileID: 22100000, guid: f9dea993a6c25d747b34a52d93f60d46, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff7c0cd1952250749b6c13bee1ad80e8, type: 3}
 --- !u!4 &9212186328104222467 stripped

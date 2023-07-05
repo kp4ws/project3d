@@ -102,8 +102,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 2678704243237375850}
     m_Modifications:
     - target: {fileID: 748041658729263728, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}
+      propertyPath: field of view
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 748041658729263728, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 748041658729263735, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06099987
+      objectReference: {fileID: 0}
+    - target: {fileID: 748041658729263735, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.17699814
       objectReference: {fileID: 0}
     - target: {fileID: 1641514514874349275, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}
       propertyPath: m_RootOrder
@@ -152,6 +164,18 @@ PrefabInstance:
     - target: {fileID: 4666691503423088571, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}
       propertyPath: m_Name
       value: FPS_Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709140669028522328, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06099987
+      objectReference: {fileID: 0}
+    - target: {fileID: 7709140669028522328, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.17699814
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521154779789293416, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6af7fdb5543b224cbb1330352d46c6b, type: 3}

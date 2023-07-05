@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using Kp4wsGames.Entities.Player;
 
 namespace Kp4wsGames.Entities.Enemy
 {
@@ -12,12 +13,25 @@ namespace Kp4wsGames.Entities.Enemy
 
         private bool isProvoked = false;
         private bool isAlerted = false;
+        private bool isAttacking = false;
+        private bool isDead = false;
 
         private float distanceToTarget = Mathf.Infinity;
+        private float originalSpeed;
 
+        private void Start()
+        {
+            //TODO - EnemyAI should work like RPG course
+            if (target == null)
+                target = FindObjectOfType<PlayerController>().transform;
+
+            originalSpeed = agent.speed;
+        }
 
         private void Update()
         {
+            if (isDead) return;
+
             distanceToTarget = Vector3.Distance(target.position, transform.position);
 
             if (isProvoked)
@@ -57,6 +71,16 @@ namespace Kp4wsGames.Entities.Enemy
             float speed = localVelocity.z;
 
             animator.SetFloat("xVelocity", speed);
+            animator.SetBool("isAttacking", isAttacking);
+
+            if (GetComponent<Health>().GetHealth() < 0.01f)
+            {
+                Debug.Log("test");
+                isDead = true;
+                animator.SetTrigger("deathTrigger");
+                agent.enabled = false;
+                GetComponent<CapsuleCollider>().enabled = false;
+            }
         }
 
         private void EngageTarget()
@@ -75,11 +99,15 @@ namespace Kp4wsGames.Entities.Enemy
 
         private void ChaseTarget()
         {
+            isAttacking = false;
+            agent.speed = originalSpeed;
             agent.SetDestination(target.position);
         }
 
         private void AttackTarget()
         {
+            isAttacking = true;
+            agent.speed = 0;
             Debug.Log(name + " has seeked and is destroying " + target.name);
         }
 

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.Playables;
 
-namespace Kp4wsGames.EventManagement
+namespace Kp4wsGames.Events
 {
     public class GameEventTrigger : MonoBehaviour
     {

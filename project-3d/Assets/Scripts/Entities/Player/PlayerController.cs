@@ -12,7 +12,7 @@ namespace Kp4wsGames.Entities.Player
         [field: SerializeField] public InputReader InputReader { get; set; }
         [field: SerializeField] public CharacterController Controller { get; set; }
         [field: SerializeField] public PlayerBrain Modifiers { get; set; }
-        [field: SerializeField] public Animator Animator { get; set; }
+        //[field: SerializeField] public Animator Animator { get; set; }
         public Transform MainCameraTransform { get; private set; }
 
         private Interactable currentInteractable;
@@ -24,8 +24,13 @@ namespace Kp4wsGames.Entities.Player
 
         private void Update()
         {
-            CheckInteractables();
+            //CheckInteractables();
             MovePlayer();
+        }
+
+        private void LateUpdate()
+        {
+            CameraRotation();
         }
 
         private void MovePlayer()
@@ -56,47 +61,69 @@ namespace Kp4wsGames.Entities.Player
             return forward * InputReader.MovementValue.y + right * InputReader.MovementValue.x;
         }
 
-        public void CheckInteractables()
+        private void CameraRotation()
         {
-            RaycastHit hit;
+            //// if there is an input
+            //if (_input.look.sqrMagnitude >= _threshold)
+            //{
+            //    //Don't multiply mouse input by Time.deltaTime
+            //    float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-            if (Physics.Raycast(transform.position, MainCameraTransform.transform.forward, out hit, Modifiers.InteractableDistance))
-            {
-               //Debug.DrawRay(transform.position, MainCameraTransform.transform.forward * hit.distance, Color.yellow);
-                Interactable interactable = hit.collider.gameObject.GetComponent<Interactable>();
+            //    _cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
+            //    _rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
 
-                if (interactable != null)
-                {
-                    if(currentInteractable != null)
-                    {
-                        currentInteractable.OnEndLook();
-                    }
-                    currentInteractable = interactable;
-                    currentInteractable.OnStartLook();
-                }
-                else
-                {
-                    if (currentInteractable != null)
-                    {
-                        currentInteractable.OnEndLook();
-                        currentInteractable = null;
-                    }
-                }
-            }
-            else
-            {
-                //TODO remove repetitive code
-                if (currentInteractable != null)
-                {
-                    currentInteractable.OnEndLook();
-                    currentInteractable = null;
-                }
-            }
+            //    // clamp our pitch rotation
+            //    _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+
+            //    // Update Cinemachine camera target pitch
+            //    CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
+
+            //    // rotate the player left and right
+            //    transform.Rotate(Vector3.up * _rotationVelocity);
+            //}
         }
 
-        public void Interact()
-        {
-            currentInteractable?.OnInteract();
-        }
+        //public void CheckInteractables()
+        //{
+        //    RaycastHit hit;
+
+        //    if (Physics.Raycast(transform.position, MainCameraTransform.transform.forward, out hit, Modifiers.InteractableDistance))
+        //    {
+        //       //Debug.DrawRay(transform.position, MainCameraTransform.transform.forward * hit.distance, Color.yellow);
+        //        Interactable interactable = hit.collider.gameObject.GetComponent<Interactable>();
+
+        //        if (interactable != null)
+        //        {
+        //            if(currentInteractable != null)
+        //            {
+        //                currentInteractable.OnEndLook();
+        //            }
+        //            currentInteractable = interactable;
+        //            currentInteractable.OnStartLook();
+        //        }
+        //        else
+        //        {
+        //            if (currentInteractable != null)
+        //            {
+        //                currentInteractable.OnEndLook();
+        //                currentInteractable = null;
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        //TODO remove repetitive code
+        //        if (currentInteractable != null)
+        //        {
+        //            currentInteractable.OnEndLook();
+        //            currentInteractable = null;
+        //        }
+        //    }
+        //}
+
+        //public void Interact()
+        //{
+        //    currentInteractable?.OnInteract();
+        //}
     }
 }

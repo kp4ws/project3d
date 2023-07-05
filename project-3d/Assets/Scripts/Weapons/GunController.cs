@@ -12,14 +12,13 @@ namespace Kp4wsGames.Weapons
         [SerializeField] private ParticleSystem muzzleFlash;
         [SerializeField] private GameObject hitEffect;
 
-        public void OnFire(InputValue value)
+        //Game Event Listener Callback
+        public void OnShoot()
         {
-            //TODO Implement semi auto / auto options for firing
-            if (value.isPressed)
-                Shoot();
+            HandleShoot();
         }
 
-        private void Shoot()
+        private void HandleShoot()
         {
             PlayMuzzleFlash();
             ProcessRaycast();

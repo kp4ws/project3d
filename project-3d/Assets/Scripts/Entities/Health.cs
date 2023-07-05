@@ -12,8 +12,13 @@ namespace Kp4wsGames.Entities
 
             if (currentHealth <= 0)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
+        }
+
+        public float GetHealth()
+        {
+            return currentHealth;
         }
     }
 }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d31c5586d5b156b4aa9c72b34e7b5628, type: 3}
-  m_Name: Brain_FirstPerson 1
+  m_Name: Brain_FirstPerson
   m_EditorClassIdentifier: 
-  <MoveSpeed>k__BackingField: 5
+  <MoveSpeed>k__BackingField: 15
   <RunSpeed>k__BackingField: 8
   <JumpHeight>k__BackingField: 2
   <GravityValue>k__BackingField: -25

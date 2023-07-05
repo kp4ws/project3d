@@ -59,8 +59,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 500
-  field of view: 60
+  far clip plane: 5000
+  field of view: 67
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -143,11 +143,11 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
